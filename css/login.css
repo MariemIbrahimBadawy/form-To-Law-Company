@@ -1,0 +1,139 @@
+/* 
+   1- Content (Title and Form) 
+   2- Title  
+   3- Form 
+/* 
+
+
+================================== 
+   1- Content (Title and Form) 
+ ================================= 
+*/
+section.content{
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+
+/* 
+================================== 
+   2- Title  
+ ================================= 
+*/
+main .title{
+    position: absolute;
+    text-align: center;
+    background-color:#0000008f;
+    top:0;
+    z-index: 1;
+    width:100%;
+    text-align: center;
+    font-family: var(--fontFamily);
+ }
+ 
+ main .title h1{
+     color:var(--secondaryColor);
+     font-family:var(--fontFamily);
+     font-weight: bold
+ }
+/* 
+================================== 
+   3- Form 
+ ================================= 
+*/
+ form{
+    position: absolute;
+    top:150px;
+    z-index: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:300px;
+    padding: 40px 0;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.317);
+ }
+ form .user, 
+ form .pass{
+  align-items: center;
+  justify-content: center;
+ }
+ form label{
+   z-index: 1;
+   display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ form label img{
+   width:19px;
+   background-color: var(--primaryColor);
+   padding: 4px;
+   margin: -10px -15px;
+   border-radius: 15px;
+ }
+form input{
+   width:160px;
+   margin: 10px auto;
+   border:none;
+   text-align: center;
+   border-radius:7px 9px 6px 2px;
+   padding:4px 5px;
+   color: var(--textColor);
+   font-weight: 600;
+   box-shadow:1px 2px 0px 0px rgb(231 177 61 / 38%)
+}
+form input:focus-visible{
+   border:none;
+   outline: none;
+}
+ /* form .logo img{
+    width:60px;
+    height: 20px;
+ } */
+ form a#forget-password{
+   all:unset;
+   cursor: pointer;
+   font-size: 14px;
+   margin:13px;
+   color:var(--secondaryColor);
+   font-family: var(--fontFamily);
+
+
+ }
+ form button {
+   width:200px;
+   cursor: pointer;
+   border:none;
+   border-radius: 8px;
+   padding: 8px 0;
+   color:rgba(0, 0, 0, 0.801);
+   font-weight: bold;
+   font-size: 15px;
+   background-color: var(--primaryColor);
+   opacity:.8;
+   box-shadow:1px 2px 0px 0px rgba(255, 255, 255, 0.478)
+ }
+
+ form button:hover{
+   font-size: 19px;
+   transition: .5s linear;
+   opacity: 1;
+ }
+
+
+ /* 
+================================== 
+   4- Media Query 
+ ================================= 
+*/
+
+@media(max-width:800px){
+   main .title{
+      padding: 0 5rem;
+   }
+   main .title h1{
+      font-size: 1rem;
+      padding: 0 20px;
+   }
+}
